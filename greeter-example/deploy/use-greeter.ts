@@ -15,7 +15,7 @@ if (!PRIVATE_KEY)
   throw "⛔️ Private key not detected! Add it to the .env file!";
 
 // Address of the contract on zksync testnet
-const CONTRACT_ADDRESS = "";
+const CONTRACT_ADDRESS = "0xB3863a3780877b7798715795a6d7e61194D38Ca3";
 
 if (!CONTRACT_ADDRESS) throw "⛔️ Contract address not provided";
 
@@ -39,7 +39,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   console.log(`The message is ${await contract.greet()}`);
 
   // send transaction to update the message
-  const newMessage = "Hello people!";
+  const newMessage = "Gadddammittt!";
   const tx = await contract.setGreeting(newMessage);
 
   console.log(`Transaction to change the message is ${tx.hash}`);
